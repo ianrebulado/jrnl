@@ -1,0 +1,21 @@
+<div class="flex flex-col h-screen">
+
+  <%= render partial: 'navbar' %>
+
+  <div class="flex flex-1 justify-start items-center text-white">
+    <div class="border border-t-4 h-full w-2/5 bg-slate-900 p-7 flex flex-col">
+      <h2 class="text-4xl font-bold mb-8"> Categories. </h2>
+      <% @categories.each do |category| %>
+       <span dir="ltr" class="p-6 border rounded-md my-4 border-white ps-4 py-4 hover:bg-slate-800 cursor-pointer"> <%= link_to category.name.capitalize, category_path(category) %> </span>
+      <% end %>
+    </div>
+
+    <div class="border border-t-4 h-full w-3/5 bg-slate-900 p-7 flex flex-col">
+      <h2 class="text-4xl font-bold mb-4"> Here are your tasks today, <%= current_user.email.split('@').first.capitalize %>. </h2>
+        <% @tasks_due_today.each do |task| %>
+         <span dir="ltr" class="ps-1 py-2 hover:bg-slate-800 cursor-pointer"> <%= task.task_name %> </span> 
+        <% end %>
+    </div>
+  </div>
+
+</div>

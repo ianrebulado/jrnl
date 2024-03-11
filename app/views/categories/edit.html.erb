@@ -1,0 +1,9 @@
+<div>
+  <h1>Editing category</h1>
+</div>
+
+<%= form_with model: @category, url: category_path(@category), method: :patch do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.submit :Edit %>
+<% end %>
