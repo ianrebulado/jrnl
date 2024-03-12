@@ -10,6 +10,7 @@
   <%= form.date_field :due_date, class: "text-black w-1/4" %>
 
   <%= form.submit :Edit, class: "text-white p-4 border rounded-md bg-green-700 w-1/4" %>
-</div>
 <% end %>
+  <%= button_to "Delete", category_task_path(@category, @task), method: :delete, class: "text-white p-4 border rounded-md bg-red-700" %>
+</div>
 </div>
