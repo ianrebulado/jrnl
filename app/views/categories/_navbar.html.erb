@@ -1,9 +1,9 @@
-  <div class="flex p-7 justify-between items-center bg-slate-900 text-white"> 
+  <div class="flex p-7 justify-between items-center bg-white text-black"> 
     
     <h1 class="text-4xl font-bold"> <%= link_to "jrnl.", root_path %>  </h1>
 ///
   <div class="flex gap-5">
-    <%= link_to "Create a category", new_category_path %>
-    <%= button_to "Logout", destroy_user_session_path, method: :delete  %>
+    <%= link_to "Create a category", new_category_path, class: "font-bold text-md" %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "font-bold text-md"  %>
   </div>
   </div>
